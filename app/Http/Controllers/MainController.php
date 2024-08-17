@@ -27,7 +27,6 @@ class MainController extends Controller
     {
      if(!Auth::check()){
           return redirect()->route('login');
-
          }
         return view('dashboard');
     }

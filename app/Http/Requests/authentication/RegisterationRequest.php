@@ -32,13 +32,14 @@ class RegisterationRequest extends FormRequest
     public function messages(): array
     {
         return [
-            'name.required' => 'Le nom est requis',
+            'passwordConfirm.same' => 'Les mots de passe ne sont pas identiques',
+            
             'name.min' => 'Le nom doit contenir au moins 3 caractères',
-            'name.max' => 'Le nom doit contenir au maximum 128 caractères',
+     
             'name.unique' => 'Le nom est déjà pris',
-            'email.required' => 'L\'email est requis',
-            'email.min' => 'L\'email doit contenir au moins 3 caractères',
-            'email.max' => 'L\'email doit contenir au maximum 128 caractères',
+            'email.unique' => 'L\'email est déjà pris',
+         
+           
             'email.email' => 'L\'email doit être valide',
         ];
     }
