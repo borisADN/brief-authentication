@@ -21,9 +21,9 @@
         background-image: url({{ asset('bg-texture.png') }});
     }
     span{
-        font-family: cursive;
-        font-style: italic;
-        font-size: 4rem;
+        font-family: 'Poppins', sans-serif;
+        /* font-style: italic; */
+        font-size: 2rem;
         color: #da4518
     }
     span:hover{
@@ -31,7 +31,7 @@
         cursor: pointer;
         text-decoration: underline;
         
-       /* font-family: 'Poppins', sans-serif; */
+
     }
     a{
         text-decoration: none;
@@ -65,9 +65,20 @@
 </style>
 <body >
     <div class="container">
-        <h1 style="text-align: center">Hello , Mr  <span>{{ Auth::user()->name }}</span> </h1>
+        <h1 style="text-align: center">Hello , Mr  <span id="typed">{{ Auth::user()->name }}</span> </h1>
         <div class="logout_btn" style="text-align: center"><a href="{{ route('logout') }}" onclick="return confirm('Voulez-vous vous deconnecter ?')"><i class="ri-logout-box-line"></i>Se deconnecter</a></div>
-    </body>
     </div>
+
+
+    <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#typed', {
+            strings: ['{{ Auth::user()->name }},', '{{ Auth::user()->email }}'],
+            typeSpeed: 100,
+            backSpeed: 100,
+            loop: true
+        });
+    </script>
+</body>
     
 </html>

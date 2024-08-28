@@ -86,7 +86,7 @@ class AuthController extends Controller
                 return redirect()->route('otpCode');
             } else {
 
-                //toast here
+               
                 return back()->with('error', 'Email non trouvé.');
               
             }
@@ -105,10 +105,9 @@ class AuthController extends Controller
         try {
             $code = $this->authInterface->checkOtpCode($data);
             if (!$code) {
-     
+                
                 return back()->with('error', 'Code de confirmation invalide.');
             } else {
-      
                 return redirect()->route('newPassword');
             }
         } catch (\Exception $ex) {

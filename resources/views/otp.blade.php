@@ -9,35 +9,14 @@
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    
     <title>Authentification</title>
 
 </head>
 
 <body>
-    @if (session('error'))
-    <div class="alert alert-danger">
-        {{ session('error') }}
-    </div>
-@endif
-
-
-@if (session('error'))
-<script>
-    toastr.options = {
-        "closeButton": true,
-        "progressBar": true,
-        "positionClass": "toast-top-left",
-        "timeOut": "3000",
-        "showEasing": "linear"
-    };
-
-    toastr.error('{{ session('error') }}');
-</script>
-@endif
-
     
-
 @if (session('error'))
 <script>
     toastr.options = {
@@ -47,8 +26,8 @@
         "timeOut": "3000",
         "showEasing": "linear"
     };
-    toastr.error('kjkjkj')
-    // toastr.error('{{ session('error') }}');
+   
+    toastr.error('{{ session('error') }}');
 </script>
 @endif
 
