@@ -8,30 +8,39 @@
 
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
     <title>Authentification</title>
 
 </head>
 
-<body>
-    
-@if (session('error'))
-<script>
-    toastr.options = {
-        "closeButton": true,
-        "progressBar": true,
-        "positionClass": "toast-top-left",
-        "timeOut": "3000",
-        "showEasing": "linear"
-    };
-   
-    toastr.error('{{ session('error') }}');
-</script>
-@endif
+<style>
+    body {
+        font-family: 'Baloo 2', cursive;
+    }
+</style>
 
-  
+<body>
+
+    @if (session('error'))
+        <script>
+            toastr.options = {
+                "closeButton": true,
+                "progressBar": true,
+                "positionClass": "toast-top-left",
+                "timeOut": "3000",
+                "showEasing": "linear"
+            };
+
+            toastr.error('{{ session('error') }}');
+        </script>
+    @endif
+
+
 
 
 

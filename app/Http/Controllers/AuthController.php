@@ -95,7 +95,7 @@ class AuthController extends Controller
         }
     }
 
-    public function checkOtpCode(\App\Http\Requests\authentication\OtpCodeRequest $request)
+    public function checkOtpCode(OtpCodeRequest $request)
     {
         $data = [
             'email' => $request->email,

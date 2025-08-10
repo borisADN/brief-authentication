@@ -5,13 +5,6 @@ use App\Http\Controllers\MainController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
-// Route::get('/', function () {
-//     if(Auth::check()){
-//             return redirect()->route('dashboard');
-
-//         }
-//     return view('registeration');
-// });
 Route::get('/', [AuthController::class, 'index'])->name('home');
 
 

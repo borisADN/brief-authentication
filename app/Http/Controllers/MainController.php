@@ -23,11 +23,5 @@ class MainController extends Controller
          }
         return view('dashboard');
     }
-    public function index2()
-    {
-     if(!Auth::check()){
-          return redirect()->route('login');
-         }
-        return view('dashboard');
-    }
+
 }
